@@ -4,7 +4,9 @@ from time import localtime,strftime
 path = input(f"Paste your path in here: (C:\\example\\example) \n")
 current_directory = os.getcwd()
 if path == current_directory: pass
-else : current_directory = path 
+else : 
+    os.chdir(path=path)
+    current_directory = os.getcwd()
 
 files_in_dir = os.listdir(current_directory)
 
